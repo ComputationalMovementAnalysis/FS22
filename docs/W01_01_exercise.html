@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Exercise 1 | Computational Movement Analysis: Patterns and Trends in Environmental Data</title>
+  <meta name="description" content="Exercise 1 | Computational Movement Analysis: Patterns and Trends in Environmental Data" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Exercise 1 | Computational Movement Analysis: Patterns and Trends in Environmental Data" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="ComputationalMovementAnalysis/FS21" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Exercise 1 | Computational Movement Analysis: Patterns and Trends in Environmental Data" />
+  
+  
+  
+
+<meta name="author" content="Patrick Laube, Nils Ratnaweera, Nikolaos Bakogiannis" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="90_misc/mystyle.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<img src="02_Images/zhaw_lsfm_schwarz.png" alt="ZHAW Logo" width="300">
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to the course!</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i>License</a></li>
+<li class="chapter" data-level="" data-path="W01_01_exercise.html"><a href="W01_01_exercise.html"><i class="fa fa-check"></i>Exercise 1</a></li>
+<li class="divider"></li>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br /></a>.
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Computational Movement Analysis: Patterns and Trends in Environmental Data</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="exercise-1" class="section level1">
+<h1>Exercise 1</h1>
+<p>This exercise covers the necessary steps for getting ready in <code>R</code> and some basic concepts for setting up a well-structured <code>R</code> project. The lesson introduces how additional packages that provide useful functions for data science are made available and how spatial data is handled. The exercise concludes with the creation of your first map featuring movement data.</p>
+<p><strong>Learning Outcomes</strong>*</p>
+<ul>
+<li>You learn how to structure an <code>R</code> project.</li>
+<li>You can read movement data from a .csv-file into a <code>data.frame</code></li>
+<li>You can convert spatial point data from a <code>data.frame</code> to a spatial object <code>sf</code></li>
+<li>You can perform basic spatial operations on spatial objects in <code>R</code></li>
+<li>You can produce simple maps of your spatial data using <code>ggplot2</code></li>
+<li>You can produce simple maps of your spatial data using <code>tmap</code></li>
+</ul>
+<p><strong>Prerequisites</strong>*</p>
+<p>Readings Skills from “R for Data Science” <span class="citation">(<a href="W01_01_exercise.html#ref-wickham2017" role="doc-biblioref">Wickham and Grolemund 2017</a>)</span>:</p>
+<ul>
+<li>RS1.1 Preface (16p, ix-xxiv)</li>
+<li>RS1.2 Chap2 Workflow basics (3p, 37-39)</li>
+<li>RS1.3 Chap4 Workflow scripts (3p, 77-79)</li>
+<li>RS1.4 Chap6 workflow projects (6p, 111-116)</li>
+<li>RS1.5 Chap8 Data Import with <code>readr</code> (21p)</li>
+<li>RS1.6 Chap13 Date and Times with <code>lubridate</code> (18p, 237-256)</li>
+</ul>
+
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-wickham2017" class="csl-entry">
+Wickham, Hadley, and Garrett Grolemund. 2017. <em>R for Data Science: Import, Tidy, Transform, Visualize, and Model Data</em>. 1st ed. O’Reilly Media, Inc.
+</div>
+</div>
+</div>
+<script src="https://utteranc.es/client.js"
+        repo="ComputationalMovementAnalysis/utterances"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/ComputationalMovementAnalysis/FS21/edit/master/W01_01_exercise.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/ComputationalMovementAnalysis/FS21/blob/master/W01_01_exercise.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

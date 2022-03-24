@@ -6,5 +6,4 @@
 *.rds
 **/*_hide.R
 patterns-and-trends.Rmd
-docs/
 _bookdown_files/

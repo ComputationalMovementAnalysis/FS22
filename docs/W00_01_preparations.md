@@ -1,47 +1,29 @@
 ## Preparation {#w1-preparation}
 
-Much of this chapter was taken from @bryan2021. If you want to dive deeper into using Git, we highly recommend this book. For an *even* deeper dive into Git, read @chacon2014. Both books are available free and open source on [happygitwithr.com](https://happygitwithr.com/) and [git-scm.com/book](https://git-scm.com/book/), respectively.
-
-DELETE IT AFTERWARDS
-
-```{r, include=FALSE}
-source("01_R_Files/helperfunctions.R")
-```
+Much of this chapter was taken from @bryan2021. If you want to dive deeper into using Git, we highly recommend this book. For an *even* deeper dive into Git, read @chacon2014. Both books are available free and open source on [happygitwithr.com](https://happygitwithr.com/) and [git-scm.com/book](https://git-scm.com/book/), respectively. 
 
 
-```{r, opts.label="solution_hideOutput"}
-
-library(rversions)
-
-rversion_current <- rversions::r_release()
-rversion_current
 
 
-rversion_current_sep <- strsplit(as.character(base::getRversion()), "\\.")[[1]]
 
-
-rversion_minimal <- function(version_string){
-  version_int <- as.integer(strsplit(version_string, "\\.")[[1]])
-  paste(version_int[1], ifelse(version_int[2] == 0, version_int[2], version_int[2]-1), 0,sep = ".")
-}
-
-```
 
 
 ### Check you version of `R`
 
 Check your Version of `R` by opening RStudio and typing the following command into the console. 
 
-```{r, opts.label="example_showOutput"}
+
+```r
 R.version.string
+## [1] "R version 4.1.3 (2022-03-10)"
 ```
 
-This returns the version number of your R installation, whereas the first digit (``r rversion_current_sep[1]``) indicates the number of the *major release*, the second digit  (``r rversion_current_sep[2]``) indicates the *minor release* and the last digit (``r rversion_current_sep[3]``) refers to the *patch release*. As a general rule of thumb, you will want to update R if you
+This returns the version number of your R installation, whereas the first digit (`4`) indicates the number of the *major release*, the second digit  (`1`) indicates the *minor release* and the last digit (`3`) refers to the *patch release*. As a general rule of thumb, you will want to update R if you
 
 - don't have the current *major* version or
 - are lagging two (or more) versions behind the current *minor release*
 
-In the time of writing (`r strftime(Sys.Date(), "%B, %Y")`), the current `R` Version is `r rversion_current$version` (released on `r rversion_current$date`, see [cran.r-project.org](https://cran.r-project.org/)). Your installation should therefore not be older than `r rversion_minimal(rversion_current$version)`. If it is, make sure that you have updated R until next week (doing it now will probably take too long). Check [these instructions on how to update R](https://www.linkedin.com/pulse/3-methods-update-r-rstudio-windows-mac-woratana-ngarmtrakulchol/)
+In the time of writing (März, 2022), the current `R` Version is 4.1.3 (released on 2022-03-10 08:05:38, see [cran.r-project.org](https://cran.r-project.org/)). Your installation should therefore not be older than 4.0.0. If it is, make sure that you have updated R until next week (doing it now will probably take too long). Check [these instructions on how to update R](https://www.linkedin.com/pulse/3-methods-update-r-rstudio-windows-mac-woratana-ngarmtrakulchol/)
 
 
 ### Check your version of RStudio
@@ -53,7 +35,8 @@ RStudio is the Graphical User Interface (GUI) we use in our course to interact w
 
 If you haven't already, install the packages `tidyverse`, `sf` and `terra`(using `install.packages()`). 
 
-```{r, opts.label = "noeval", eval = FALSE}
+
+```r
 install.packages("tidyverse")
 install.packages("sf")
 install.packages("terra")
@@ -124,33 +107,14 @@ Of course, replace the name and address with your credentials. Use the email add
 
 ### Prepare the folder structure for this course{#folder-structure}
 
-```{r, echo = FALSE}
-rootdir <- "C:/Users/yourname/semester2/Modul_CMA"
-
-paths2node <- function(paths){
-  require(data.tree)
-  as.Node(data.frame(paths = paths),pathName = "paths")
-}
-
-subpaths <- function(rootfolder_path, rootfolder_name, subfolders){
-  require(stringr)
-  c(paste0(rootfolder_name," (",stringr::str_replace_all(rootfolder_path, "/", "\\\\"),")"), file.path("rootfolder_path",subfolders))
-}
-
-```
-
-
-By this point, you probably have created a folder for this course somewhere on your computer. In our example, we assume this folder is located here: ``r rootdir`` (mentally replace this with your actual path). Before we dive into the exercises, take a minute to think about how you are going to structure your files in this folder. This course will take place over 7 weeks, and in each week you will receive or produce various files. We recommend creating a separate folder for each week, and one folder for the semester project, like so:
 
 
 
-```{r, include=FALSE}
-library(dplyr)
-week_folders <- paste0("week",1:7)
+By this point, you probably have created a folder for this course somewhere on your computer. In our example, we assume this folder is located here: `C:/Users/yourname/semester2/Modul_CMA` (mentally replace this with your actual path). Before we dive into the exercises, take a minute to think about how you are going to structure your files in this folder. This course will take place over 7 weeks, and in each week you will receive or produce various files. We recommend creating a separate folder for each week, and one folder for the semester project, like so:
 
-subpaths(rootdir,"Course Folder",c(week_folders,"semester_project")) %>%
-  paths2node()
-```
+
+
+
 
 ```
 Course Folder (C:\\Users\\yourname\\semester2\\Modul_CMA)
@@ -168,21 +132,7 @@ Course Folder (C:\\Users\\yourname\\semester2\\Modul_CMA)
 For the R-exercises that take place in weeks 1 to 5, we recommend that you create a new RStudio Project each week in subdirectory of the appropriate week. For example, this week your folder structure could look like this: 
 
 
-```{r, include=FALSE}
 
-
-week_rootdir <- file.path(rootdir, week_folders[1])
-
-rprojfolder <- "week1-rexercise"
-
-rprojfiles <- file.path(rprojfolder,c(paste0(rprojfolder,".Rproj"),"wildschwein_BE.csv","my_solution.Rmd"))
-
-files_week1 <- file.path(week_folders[1], c("slides.pdf","my_notes.docx","seminar_screenshot.jpg",rprojfiles))
-
-
-subpaths(week_rootdir,"Folder Week 1",c("slides.pdf","my_notes.docx","seminar_screenshot.jpg",rprojfiles))  %>%
-  paths2node()
-```
 
 
 ```
@@ -199,8 +149,8 @@ Folder Week 1 (C:\\Users\\yourname\\semester2\\Modul_CMA\\week1)
 
 Note: 
 
-- the RStudio Project is located in a subfolder of ``r week_rootdir`` and named ``r rprojfolder``.
-- ``r rprojfolder`` is the project's *directory name* and the *project name*
+- the RStudio Project is located in a subfolder of `C:/Users/yourname/semester2/Modul_CMA/week1` and named `week1-rexercise`.
+- `week1-rexercise` is the project's *directory name* and the *project name*
 - we realize that that the week number is redundant, there is a reason[^redundancy] for this
 - this means each week is a fresh start (which has pros and cons)
 
@@ -212,8 +162,8 @@ Note:
 
 Create a new *RStudio Project* (File > New Project > New Directory > New Project). 
 
-1. Click on "Browse" and switch to *your equivalent* of the folder ``r week_rootdir`` (the project we are about to initiate will be be created in a subdirectory of this folder). Click on "open" to confirm the selection
-2. In the field "Directory name", type ``r rprojfolder``. This will be the name of your RStudio project and it's parent directory.
+1. Click on "Browse" and switch to *your equivalent* of the folder `C:/Users/yourname/semester2/Modul_CMA/week1` (the project we are about to initiate will be be created in a subdirectory of this folder). Click on "open" to confirm the selection
+2. In the field "Directory name", type `week1-rexercise`. This will be the name of your RStudio project and it's parent directory.
 3. Check the option "Create a git repository"
 4. Click on "Create Project"
 
