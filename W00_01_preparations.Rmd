@@ -1,4 +1,4 @@
-## Preparation {#w1-preparation}
+# Preparation {#w1-preparation}
 
 Much of this chapter was taken from @bryan2021. If you want to dive deeper into using Git, we highly recommend this book. For an *even* deeper dive into Git, read @chacon2014. Both books are available free and open source on [happygitwithr.com](https://happygitwithr.com/) and [git-scm.com/book](https://git-scm.com/book/), respectively.
 
@@ -28,7 +28,7 @@ rversion_minimal <- function(version_string){
 ```
 
 
-### Check you version of `R`
+## Check you version of `R`
 
 Check your Version of `R` by opening RStudio and typing the following command into the console. 
 
@@ -44,12 +44,12 @@ This returns the version number of your R installation, whereas the first digit 
 In the time of writing (`r strftime(Sys.Date(), "%B, %Y")`), the current `R` Version is `r rversion_current$version` (released on `r rversion_current$date`, see [cran.r-project.org](https://cran.r-project.org/)). Your installation should therefore not be older than `r rversion_minimal(rversion_current$version)`. If it is, make sure that you have updated R until next week (doing it now will probably take too long). Check [these instructions on how to update R](https://www.linkedin.com/pulse/3-methods-update-r-rstudio-windows-mac-woratana-ngarmtrakulchol/)
 
 
-### Check your version of RStudio
+## Check your version of RStudio
 
 RStudio is the Graphical User Interface (GUI) we use in our course to interact with R. RStudio should not be too old either and we recommend updating if you don't have the latest version: check if this is the case by clicking on *help > check for updates*. If you need to update RStudio, don't update now but have a newer version of RStudio installed before next week. 
 
 
-### Install the necessary packages
+## Install the necessary packages
 
 If you haven't already, install the packages `tidyverse`, `sf` and `terra`(using `install.packages()`). 
 
@@ -60,7 +60,7 @@ install.packages("terra")
 ```
 
 
-### Install Git{#install-git}
+## Install Git{#install-git}
 
 Next, install Git. There are different Git installers to choose from, we recommend the following:
 
@@ -81,7 +81,7 @@ Next, install Git. There are different Git installers to choose from, we recomme
   
 
 
-### Configure RStudio{#configure-rstudio}
+## Configure RStudio{#configure-rstudio}
 
 Now we will set some RStudio Global options. But first, **close all instances of RStudio and restart it (!!!)**. Then go to Tools > Global options. 
 
@@ -103,7 +103,7 @@ Click on "Ok" to apply the change and close the options menu.
 
 
 
-### Introduce yourself to Git{#introduce-yourself-git}
+## Introduce yourself to Git{#introduce-yourself-git}
 
 Now it is time to introduce yourself to git. For this, we need to use the shell terminal, which is why we are going to spend a few word on the shell first. 
 
@@ -122,7 +122,7 @@ Of course, replace the name and address with your credentials. Use the email add
 
 
 
-### Prepare the folder structure for this course{#folder-structure}
+## Prepare the folder structure for this course{#folder-structure}
 
 ```{r, echo = FALSE}
 rootdir <- "C:/Users/yourname/semester2/Modul_CMA"
@@ -207,7 +207,7 @@ Note:
 [^redundancy]: You will see the project names of all your RStudio Projects listed in RStudio. Having the week number in the project name keeps you from getting confused on which project you are working on.
 
 
-### Create an RStudio *project* for the first week
+## Create an RStudio *project* for the first week
 
 
 Create a new *RStudio Project* (File > New Project > New Directory > New Project). 
