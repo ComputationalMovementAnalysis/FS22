@@ -7,3 +7,6 @@
 **/*_hide.R
 patterns-and-trends.Rmd
 _bookdown_files/
+*.md
+docs/
+!README.md
