@@ -13,4 +13,5 @@ patterns-and-trends.Rmd
 _bookdown_files/
 *.md
 docs/
+libs/
 !README.md
