@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Exercise 1 | Computational Movement Analysis: Patterns and Trends in Environmental Data</title>
-  <meta name="description" content="Exercise 1 | Computational Movement Analysis: Patterns and Trends in Environmental Data" />
+  <title>Exercise 2 | Computational Movement Analysis: Patterns and Trends in Environmental Data</title>
+  <meta name="description" content="Exercise 2 | Computational Movement Analysis: Patterns and Trends in Environmental Data" />
   <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Exercise 1 | Computational Movement Analysis: Patterns and Trends in Environmental Data" />
+  <meta property="og:title" content="Exercise 2 | Computational Movement Analysis: Patterns and Trends in Environmental Data" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="ComputationalMovementAnalysis/FS21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Exercise 1 | Computational Movement Analysis: Patterns and Trends in Environmental Data" />
+  <meta name="twitter:title" content="Exercise 2 | Computational Movement Analysis: Patterns and Trends in Environmental Data" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="W00_01_preparations.html"/>
-<link rel="next" href="W01_03_Slides.html"/>
+<link rel="prev" href="W01_06_solutions.html"/>
+<link rel="next" href="W02_04_demo_tidyverse.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -220,27 +220,24 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="exercise-1" class="section level1 hasAnchor">
-<h1>Exercise 1<a href="W01_01_exercise.html#exercise-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This exercise covers the necessary steps for getting ready in <code>R</code> and some basic concepts for setting up a well-structured <code>R</code> project. The lesson introduces how additional packages that provide useful functions for data science are made available and how spatial data is handled. The exercise concludes with the creation of your first map featuring movement data.</p>
+<div id="exercise-2" class="section level1 hasAnchor">
+<h1>Exercise 2<a href="W02_01_exercise.html#exercise-2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Learning Outcomes</strong>*</p>
 <ul>
-<li>You learn how to structure an <code>R</code> project.</li>
-<li>You can read movement data from a .csv-file into a <code>data.frame</code></li>
-<li>You can convert spatial point data from a <code>data.frame</code> to a spatial object <code>sf</code></li>
-<li>You can perform basic spatial operations on spatial objects in <code>R</code></li>
-<li>You can produce simple maps of your spatial data using <code>ggplot2</code></li>
-<li>You can produce simple maps of your spatial data using <code>tmap</code></li>
+<li>You understand the dplyr functions <code>mutate</code>, <code>summarise</code> and <code>group_by</code> and can apply them to <code>sf</code> objects</li>
+<li>You can derive movement parameters (<code>timelag</code>, <code>steplength</code>, <code>speed</code>) from trajectory data.</li>
+<li>You can re-sample your trajectory data for cross-scale movement analysis.</li>
 </ul>
 <p><strong>Prerequisites</strong>*</p>
 <p>Readings Skills from “R for Data Science” <span class="citation">(<a href="W02_04b_demo_tidyverse_code.html#ref-wickham2017" role="doc-biblioref">Wickham and Grolemund 2017</a>)</span>:</p>
 <ul>
-<li>RS1.1 Preface (16p, ix-xxiv)</li>
-<li>RS1.2 Chap2 Workflow basics (3p, 37-39)</li>
-<li>RS1.3 Chap4 Workflow scripts (3p, 77-79)</li>
-<li>RS1.4 Chap6 workflow projects (6p, 111-116)</li>
-<li>RS1.5 Chap8 Data Import with <code>readr</code> (21p)</li>
-<li>RS1.6 Chap13 Date and Times with <code>lubridate</code> (18p, 237-256)</li>
+<li>RS2.1 Chap3 Data Transformation with <code>dplyr</code> (31p, 43-76)</li>
+<li>RS2.2 Chap10 Relational data with <code>dplyr</code> (21p, 171-193)</li>
+<li>RS2.3 Chap14 Pipes with <code>magrittr</code> (6p, 261-268)</li>
+</ul>
+<p>Readings Theory</p>
+<ul>
+<li>R2.1 <span class="citation"><a href="W02_04b_demo_tidyverse_code.html#ref-laube2011" role="doc-biblioref">Laube and Purves</a> (<a href="W02_04b_demo_tidyverse_code.html#ref-laube2011" role="doc-biblioref">2011</a>)</span>: How fast is a cow? cross - scale analysis of movement data.</li>
 </ul>
 
 <script src="https://utteranc.es/client.js"
@@ -255,8 +252,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="W00_01_preparations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="W01_03_Slides.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="W01_06_solutions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="W02_04_demo_tidyverse.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -277,7 +274,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ComputationalMovementAnalysis/FS21/edit/master/W01_01_exercise.Rmd",
+"link": "https://github.com/ComputationalMovementAnalysis/FS21/edit/master/W02_01_exercise.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -285,7 +282,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/ComputationalMovementAnalysis/FS21/blob/master/W01_01_exercise.Rmd",
+"link": "https://github.com/ComputationalMovementAnalysis/FS21/blob/master/W02_01_exercise.Rmd",
 "text": null
 },
 "download": null,

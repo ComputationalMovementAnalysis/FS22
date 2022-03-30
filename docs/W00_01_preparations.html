@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="index.html"/>
-
+<link rel="next" href="W01_01_exercise.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -169,6 +169,37 @@ div.csl-indent {
 <li><a href="W00_01_preparations.html#folder-structure">Prepare the folder structure for this course<span></span></a></li>
 <li><a href="W00_01_preparations.html#create-an-rstudio-project-for-the-first-week">Create an RStudio <em>project</em> for the first week<span></span></a></li>
 </ul></li>
+<li><a href="W01_01_exercise.html#exercise-1">Exercise 1<span></span></a>
+<ul>
+<li><a href="W01_03_Slides.html#slides">Slides<span></span></a></li>
+<li><a href="W01_05_tasks_and_inputs.html#w1-tasks-and-inputs">Tasks and inputs<span></span></a>
+<ul>
+<li><a href="W01_05_tasks_and_inputs.html#task-1-import-data">Task 1: Import data<span></span></a></li>
+<li><a href="W01_05_tasks_and_inputs.html#task-2-explore-data">Task 2: Explore Data<span></span></a></li>
+<li><a href="W01_05_tasks_and_inputs.html#input-handling-spatial-data">Input: Handling spatial data<span></span></a></li>
+<li><a href="W01_05_tasks_and_inputs.html#task-3-project-data-from-wgs84">Task 3: Project data from WGS84<span></span></a></li>
+<li><a href="W01_05_tasks_and_inputs.html#input-calculate-convex-hull">Input: Calculate Convex Hull<span></span></a></li>
+<li><a href="W01_05_tasks_and_inputs.html#task-4-ploting-spatial-objects">Task 4: Ploting spatial objects<span></span></a></li>
+<li><a href="W01_05_tasks_and_inputs.html#w1-importing-raster">Input: Importing raster data<span></span></a></li>
+<li><a href="W01_05_tasks_and_inputs.html#task-5-adding-a-background-map">Task 5: Adding a background map<span></span></a></li>
+<li><a href="W01_05_tasks_and_inputs.html#task-6-create-an-interactive-map">Task 6: Create an interactive map<span></span></a></li>
+</ul></li>
+<li><a href="W01_06_solutions.html#solutions">Solutions<span></span></a></li>
+</ul></li>
+<li><a href="W02_01_exercise.html#exercise-2">Exercise 2<span></span></a>
+<ul>
+<li><a href="W02_04_demo_tidyverse.html#demo-tidyverse">Demo Tidyverse<span></span></a>
+<ul>
+<li><a href="W02_04_demo_tidyverse.html#difftime"><code>difftime</code><span></span></a></li>
+<li><a href="W02_04_demo_tidyverse.html#lead-lag"><code>lead()</code> / <code>lag()</code><span></span></a></li>
+<li><a href="W02_04_demo_tidyverse.html#mutate"><code>mutate()</code><span></span></a></li>
+<li><a href="W02_04_demo_tidyverse.html#group_by"><code>group_by()</code><span></span></a></li>
+<li><a href="W02_04_demo_tidyverse.html#summarise"><code>summarise()</code><span></span></a></li>
+<li><a href="W02_04_demo_tidyverse.html#piping">Piping<span></span></a></li>
+<li><a href="W02_04_demo_tidyverse.html#bring-it-all-together">Bring it all together…<span></span></a></li>
+</ul></li>
+<li><a href="W02_04b_demo_tidyverse_code.html#demo-tidyverse-r-code">Demo Tidyverse (R-Code)<span></span></a></li>
+</ul></li>
 <li class="divider"></li>
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br /></a>.
 
@@ -191,7 +222,7 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="w1-preparation" class="section level1 hasAnchor">
 <h1>Preparation<a href="W00_01_preparations.html#w1-preparation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Much of this chapter was taken from <span class="citation"><a href="W00_01_preparations.html#ref-bryan2021" role="doc-biblioref">Bryan and Heister</a> (<a href="W00_01_preparations.html#ref-bryan2021" role="doc-biblioref">2021</a>)</span>. If you want to dive deeper into using Git, we highly recommend this book. For an <em>even</em> deeper dive into Git, read <span class="citation"><a href="W00_01_preparations.html#ref-chacon2014" role="doc-biblioref">Chacon and Straub</a> (<a href="W00_01_preparations.html#ref-chacon2014" role="doc-biblioref">2014</a>)</span>. Both books are available free and open source on <a href="https://happygitwithr.com/">happygitwithr.com</a> and <a href="https://git-scm.com/book/">git-scm.com/book</a>, respectively.</p>
+<p>Much of this chapter was taken from <span class="citation"><a href="W02_04b_demo_tidyverse_code.html#ref-bryan2021" role="doc-biblioref">Bryan and Heister</a> (<a href="W02_04b_demo_tidyverse_code.html#ref-bryan2021" role="doc-biblioref">2021</a>)</span>. If you want to dive deeper into using Git, we highly recommend this book. For an <em>even</em> deeper dive into Git, read <span class="citation"><a href="W02_04b_demo_tidyverse_code.html#ref-chacon2014" role="doc-biblioref">Chacon and Straub</a> (<a href="W02_04b_demo_tidyverse_code.html#ref-chacon2014" role="doc-biblioref">2014</a>)</span>. Both books are available free and open source on <a href="https://happygitwithr.com/">happygitwithr.com</a> and <a href="https://git-scm.com/book/">git-scm.com/book</a>, respectively.</p>
 <div id="check-you-version-of-r" class="section level2 hasAnchor">
 <h2>Check you version of <code>R</code><a href="W00_01_preparations.html#check-you-version-of-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Check your Version of <code>R</code> by opening RStudio and typing the following command into the console.</p>
@@ -323,31 +354,12 @@ git config --global user.email &quot;nussmar@email.com&quot;</code></pre>
 <!-- - Data cleansing -->
 <!-- - Data analysis and visualization -->
 
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-bryan2021" class="csl-entry">
-Bryan, Jenny, and Jim Heister. 2021. <em>Happy Git and GitHub for the useR</em>. <a href="https://happygitwithr.com/">https://happygitwithr.com/</a>.
-</div>
-<div id="ref-chacon2014" class="csl-entry">
-Chacon, Scott, and Ben Straub. 2014. <em>Pro Git</em>. 2nd Edition. Apress. <a href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a>.
-</div>
-<div id="ref-wickham2017" class="csl-entry">
-Wickham, Hadley, and Garrett Grolemund. 2017. <em>R for Data Science: Import, Tidy, Transform, Visualize, and Model Data</em>. 1st ed. O’Reilly Media, Inc.
 </div>
 </div>
-</div>
-</div>
-
-
-
-
-
-
-
-
 <div class="footnotes">
 <hr />
 <ol start="1">
-<li id="fn1"><p>We recommend that you start each RStudio session with a blank slate, as recommended by <span class="citation"><a href="W00_01_preparations.html#ref-wickham2017" role="doc-biblioref">Wickham and Grolemund</a> (<a href="W00_01_preparations.html#ref-wickham2017" role="doc-biblioref">2017</a>)</span> see <a href="https://r4ds.had.co.nz/workflow-projects.html">here</a><a href="W00_01_preparations.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p>We recommend that you start each RStudio session with a blank slate, as recommended by <span class="citation"><a href="W02_04b_demo_tidyverse_code.html#ref-wickham2017" role="doc-biblioref">Wickham and Grolemund</a> (<a href="W02_04b_demo_tidyverse_code.html#ref-wickham2017" role="doc-biblioref">2017</a>)</span> see <a href="https://r4ds.had.co.nz/workflow-projects.html">here</a><a href="W00_01_preparations.html#fnref1" class="footnote-back">↩︎</a></p></li>
 <li id="fn2"><p>If we don’t restore the workspace at startup, there is no need to save it on exit.<a href="W00_01_preparations.html#fnref2" class="footnote-back">↩︎</a></p></li>
 <li id="fn3"><p>You will see the project names of all your RStudio Projects listed in RStudio. Having the week number in the project name keeps you from getting confused on which project you are working on.<a href="W00_01_preparations.html#fnref3" class="footnote-back">↩︎</a></p></li>
 </ol>
@@ -364,8 +376,8 @@ Wickham, Hadley, and Garrett Grolemund. 2017. <em>R for Data Science: Import, Ti
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="W01_01_exercise.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
