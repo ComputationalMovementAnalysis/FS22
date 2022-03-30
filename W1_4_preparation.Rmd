@@ -5,15 +5,15 @@
 ```{r, echo = FALSE}
 rootdir <- "C:/Users/yourname/semester1/Modul_CMA"
 
-paths1node <- function(paths){
-  library(data.tree)
-  as.Node(data.frame(paths = paths),pathName = "paths")
-}
+# paths1node <- function(paths){
+#   library(data.tree)
+#   as.Node(data.frame(paths = paths),pathName = "paths")
+# }
 
-subpaths <- function(rootfolder_path, rootfolder_name, subfolders){
-  library(stringr)
-  c(paste(rootfolder_name," (",stringr::str_replace_all(rootfolder_path, "/", "\\\\"),")"), file.path("rootfolder_path",subfolders))
-}
+# subpaths <- function(rootfolder_path, rootfolder_name, subfolders){
+#   library(stringr)
+#   c(paste(rootfolder_name," (",stringr::str_replace_all(rootfolder_path, "/", "\\\\"),")"), file.path("rootfolder_path",subfolders))
+# }
 
 ```
 
@@ -25,8 +25,8 @@ By this point, you probably have created a folder for this course somewhere on y
 library(dplyr)
 week_folders <- paste(c("week",1:7))
 
-subpaths(rootdir,"Course Folder",c(week_folders,"semester_project")) %>%
-  paths1node()
+# subpaths(rootdir,"Course Folder",c(week_folders,"semester_project")) %>%
+#   paths1node()
 ```
 
 ```
@@ -57,8 +57,8 @@ rprojfiles <- file.path(rprojfolder,c(c(rprojfolder,".Rproj"),"wildschwein_BE.cs
 files_week0 <- file.path(week_folders[1], c("slides.pdf","my_notes.docx","seminar_screenshot.jpg",rprojfiles))
 
 
-subpaths(week_rootdir,"Folder Week 0",c("slides.pdf","my_notes.docx","seminar_screenshot.jpg",rprojfiles))  %>%
-  paths1node()
+# subpaths(week_rootdir,"Folder Week 0",c("slides.pdf","my_notes.docx","seminar_screenshot.jpg",rprojfiles))  %>%
+#   paths1node()
 ```
 
 
