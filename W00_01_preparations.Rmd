@@ -52,6 +52,7 @@ RStudio is the Graphical User Interface (GUI) we use in our course to interact w
 If you haven't already, install the packages `tidyverse`, `sf` and `terra`(using `install.packages()`). 
 
 ```{r, opts.label = "noeval", eval = FALSE}
+install.packages("rmarkdown")
 install.packages("dplyr")
 install.packages("ggplot2")
 install.packages("readr")
