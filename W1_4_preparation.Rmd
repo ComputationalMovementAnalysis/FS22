@@ -1,4 +1,4 @@
-## Preperation
+## Preparation
 
 ### Folder structure for this course {#folder-structure}
 
