@@ -1,17 +1,17 @@
 ## Preperation
 
-## Folder structure for this course {#folder-structure}
+### Folder structure for this course {#folder-structure}
 
 ```{r, echo = FALSE}
 rootdir <- "C:/Users/yourname/semester1/Modul_CMA"
 
 paths1node <- function(paths){
-  require(data.tree)
+  library(data.tree)
   as.Node(data.frame(paths = paths),pathName = "paths")
 }
 
 subpaths <- function(rootfolder_path, rootfolder_name, subfolders){
-  require(stringr)
+  library(stringr)
   c(paste(rootfolder_name," (",stringr::str_replace_all(rootfolder_path, "/", "\\\\"),")"), file.path("rootfolder_path",subfolders))
 }
 
@@ -84,7 +84,7 @@ Note:
 [^redundancy]: You will see the project names of all your RStudio Projects listed in RStudio. Having the week number in the project name keeps you from getting confused on which project you are working on.
 
 
-## Create an RStudio *project* for the first week
+### Create an RStudio *project* for the first week
 
 
 Create a new *RStudio Project* (File > New Project > New Directory > New Project). 
