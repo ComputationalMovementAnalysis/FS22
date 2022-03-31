@@ -5,3 +5,5 @@ RUN install2.r --error --skipinstalled \
 	patchwork \
 	SimilarityMeasures \
 	plotly
+RUN apt-get -y update
+RUN apt-get -y install ghp-import
