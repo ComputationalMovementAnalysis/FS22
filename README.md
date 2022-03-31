@@ -11,10 +11,22 @@ Using a (complex) heuristic, either changes in `task_*_hide.R` override `task_*.
 
 ## Publishing
 
-I have always found that version controlling the output files is [not a good idea](https://stackoverflow.com/q/67664158/4139249). One way to avoid this is by adding `docs/` to `.gitignore` and using the tool [`ghp-import`](https://pypi.org/project/ghp-import/) to publish the content of `docs/` to the branch `gh-pages` (with the command `ghp-import -p -n docs`. We can store this command with an alias to simplify things: 
+I have always found that version controlling the output files is [not a good idea](https://stackoverflow.com/q/67664158/4139249). One way to avoid this is by adding `docs/` to `.gitignore` and using the tool [`ghp-import`](https://pypi.org/project/ghp-import/). For this, you first have to add a new remote to the repo:
 
 ```
-git config --global alias.publish '!ghp-import -p -n docs'
+git remote add gh-pages https://github.com/ComputationalMovementAnalysis/computationalmovementanalysis.github.io
+```
+
+Next, you can push to this remote with the following ghp-command (append `-f` if github rejects your commit because "the remote contains work that you do not have locally"):
+
+```
+ghp-import -p -n -r gh-pages docs
+```
+
+This will publish the content of `docs/` to the branch `gh-pages` of the remote `gh-pages`. You can store this command as a (local) alias, saving it to the file `.git/config`.
+
+```
+git config alias.publish '!ghp-import -p -n -r gh-pages docs'
 ``` 
 
 See also [this discussion](https://github.com/orgs/ComputationalMovementAnalysis/teams/core-team/discussions/11)
