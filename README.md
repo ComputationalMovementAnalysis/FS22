@@ -38,7 +38,7 @@ See also [this discussion](https://github.com/orgs/ComputationalMovementAnalysis
 ## Todos for FS2022
 
 - [ ] replace `lubridate` with `clock`
-- [ ] move from bookdown to distill (?)
+- [ ] ~~move from bookdown to distill (?)~~
 - [ ] consider moving `sf` and `terra` into later weeks...
 - [ ] if we use utterances, everyone needs to subscribe to the repo
 - [ ] don't duplicate prerequisites and reading assignments
