@@ -31,7 +31,6 @@ week_folders <- paste(c("week",1:7))
 
 ```
 Course Folder (C:\\Users\\yourname\\semester1\\Modul_CMA)
- ¦--week0                                                
  ¦--week1                                                
  ¦--week2                                                
  ¦--week3                                                
@@ -42,7 +41,7 @@ Course Folder (C:\\Users\\yourname\\semester1\\Modul_CMA)
 ```
 
 
-For the R-exercises that take place in weeks 0 to 5, we recommend that you create a new RStudio Project each week in subdirectory of the appropriate week. For example, this week your folder structure could look like this: 
+For the R-exercises that take place in weeks 1 to 5, we recommend that you create a new RStudio Project each week in subdirectory of the appropriate week. For example, this week your folder structure could look like this: 
 
 
 ```{r, include=FALSE}
@@ -50,7 +49,7 @@ For the R-exercises that take place in weeks 0 to 5, we recommend that you creat
 
 week_rootdir <- file.path(rootdir, week_folders[0])
 
-rprojfolder <- "week0-rexercise"
+rprojfolder <- "week1-rexercise"
 
 rprojfiles <- file.path(rprojfolder,c(c(rprojfolder,".Rproj"),"wildschwein_BE.csv","my_solution.Rmd"))
 
@@ -63,7 +62,7 @@ files_week0 <- file.path(week_folders[1], c("slides.pdf","my_notes.docx","semina
 
 
 ```
-Folder Week 0 (C:\\Users\\yourname\\semester2\\Modul_CMA\\week1)
+Folder Week 1 (C:\\Users\\yourname\\semester2\\Modul_CMA\\week1)
  ¦--slides.pdf                                                  
  ¦--my_notes.docx                                               
  ¦--seminar_screenshot.jpg                                      
