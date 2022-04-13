@@ -130,7 +130,7 @@ rm(wildschwein_BE_sf)
 
 So what can we do with our new `sf` object that we couldn't before? One example is projecting the WGS84 (`Lat`/`Long`) coordinates into the new Swiss CRS `CH1903+ LV95`[^50]. Do this by using the function `st_transform`. By the way, do you notice a pattern here? The package `sf` names most functions for spatial operations with the prefix `st_*`, just as in PostGIS.
 
-[^50]: As we've mentioned in the first Input, you can look up the EPSG codes under (epsg.io)[http://epsg.io]. For information specific to Switzerland, check the [swisstopo website](https://www.swisstopo.admin.ch/en/knowledge-facts/surveying-geodesy/reference-systems.html) 
+[^50]: As we've mentioned in the first Input, you can look up the EPSG codes under http://epsg.io. For information specific to Switzerland, check the [swisstopo website](https://www.swisstopo.admin.ch/en/knowledge-facts/surveying-geodesy/reference-systems.html) 
 
 
 ```{r, code =  mydecrypt("11_Week1/task_3.R",".passphrase"), opts.label="solution_hideOutput"}
@@ -249,10 +249,12 @@ tm_shape(pk100_BE) +
 
 As you can see, plotting layers in `tmap` is combined with the `+` sign, just as in `ggplot2`. In `tmap` however, each layer consists of two objects: a `tm_shape()` in which the data is called, and a `tm_*` object in which we define how the data is visualized (`tm_rgb()` states that it is plotted as an RGB Raster Layer). Add the object `mcp` to the plot in this manner. Read [the vignette](https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html) if you are having trouble.
 
+Commit your changes as described [in the beginning](#w1-tasks-and-inputs). Remember to add a meaningful commit message (e.g. `completed task 5`).
+
+
 ```{r, code =  mydecrypt("11_Week1/task_5.R",".passphrase"), opts.label="solution_showOutput"}
 ```
 
-Commit your changes as described [in the beginning](#w1-tasks-and-inputs).
 
 
 ### Task 6: Create an interactive map

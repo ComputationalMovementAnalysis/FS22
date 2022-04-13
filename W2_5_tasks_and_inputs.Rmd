@@ -5,7 +5,7 @@ source('01_R_Files/helperfunctions.R')
 ```
 
 
-- Open the RStudio Project you created for week 2 in [the preparation](#w2-project)
+- Open the RStudio Project you created for week 2 in [the preparation](#w2-preparation)
 - Download the new wildboar movement data, and save it to your new project's directory `r download_url("wildschwein_BE_2056.csv","00_Rawdata")` (right click "Save target as..")
 - Now, commit your changes to your repo like we did [last week](#w1-tasks-and-inputs) (see below):
 
@@ -18,11 +18,9 @@ source('01_R_Files/helperfunctions.R')
 6. Click on "commit" to commit your changes
 ```
 
+To push your changes from our local repo on your computer to the remote repo on Github, simply click the green button "Push" in the Git tab in RStudio. Now take a look at your repository on github.com. Do you see the new files there? Contact us if this does not work.
 
-- Pushing our changes from our local repo the remote repo on Github
-  - Simply click the green button "Push" in the Git tab in RStudio. 
-  - Have a look at your remote Repository on Github (``r repourl``). Do you see the new files there? Contact us if this does not work.
-  - **Note**: You do not need to push your changes to your remote repo after every commit. It's enough if you do this every few commits.
+**Note**: You do not need to push your changes to your remote repo after every commit. It's enough if you do this every few commits.
 
 ### Task 1: Import your data
 

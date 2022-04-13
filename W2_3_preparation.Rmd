@@ -1,12 +1,6 @@
-## Preparation {#w0-preparation}
+## Preparation {#w2-preparation}
 
-
-These preparations for week 2 build up on week 1. Make sure your software is up to date: 
-
-- **R and RStudio**: Last week, we showed you how to determine whether your `R` Version or your RStudio needs updating (see [Exercise 1 / Preparation](#w0-preparation)). If your versions are up to date: Great! If not, update these before today's session.
-- **Git**:  If you had issues last week installing or configuring Git to work with RStudio, make sure you debug these problems now. Consult the [chapter on troubleshooting](https://happygitwithr.com/troubleshooting.html) @bryan2021. If this doesn't help, contact us. 
-
-
+This week, we are going to further leverage Git by connecting it to an online repository. Git on it's own can be useful, but to use all of the advantages its best to combine it with an hosted service like Github.
 
 ### Step 1: Create a Github account
 
@@ -14,7 +8,7 @@ These preparations for week 2 build up on week 1. Make sure your software is up 
 
 Last week, you worked with git on your local machine, with no way of synchronising your changes with a cloud server. This week you will use Github to sync your changes. To do this, create a Github account on [github.com](https://github.com/) (it's free of course). Use the email address that you [configured in git last week](#introduce-yourself-git). If you are not sure which mail you used, type `git config user.email` in the shell terminal. 
 
-You don't have to use the same `user.name` on Github as use configured in Git. When choosing a username on Github, consider the following advice: 
+You don't have to use the same username on Github and in Git. When choosing a username on Github, consider the following advice: 
 
 - incorporating your actual name is nice, people like to know who they are dealing with
 - choose a name that you are comfortable revealing it to a future boss
@@ -27,7 +21,7 @@ You don't have to use the same `user.name` on Github as use configured in Git. W
 
 **Typically, you do this once (per computer)**
 
-If we want to push changes from our local repository to our Github cloud repository, Github must verify your credentials. Other software might just ask for your username and password, it's a little different with Git. Basically there are two ways to connect with your remote repo (`ssh` and `https`), we will use `https` in this course. 
+If we want to push changes from our local repository to your Github cloud repository, Github must verify your credentials. Other software might just ask for your username and password, it's a little different with Git. Basically there are two ways to connect with your remote repo (`ssh` and `https`), we will use `https` in this course. 
 
 
 First, create a personal access token (PAT) on Github
@@ -40,7 +34,7 @@ First, create a personal access token (PAT) on Github
 - Copy your new personal access token (in the green box)
   - You won’t be able to see this token again
   - If you loose it, you can simply create a new one
-  - If you want to store it, you neeed to treat this PAT like a password. Only store it in a secure place (like a password management app) and *never publish this PAT publicly*
+  - If you want to store it, you neeed to treat this Personal access tokens (PAT) like a password. Only store it in a secure place (like a password management app) and *never publish this PAT publicly*
 
 
 Then, store your PAT in you local Git
@@ -56,7 +50,7 @@ Then, store your PAT in you local Git
 
 **Typically, you do this once per project**
 
-Now you can create a Repository on Github that you can afterwards connect to your RStudio project from this week (which you will create in the next step). To do this, go to [github.com](https://github.com) and click on the plus sign in the top right corner, then fill in the following information:
+Now you can create a repository on Github that you can afterwards connect to your RStudio project from this week (which you will create in the next step). To do this, go to [github.com](https://github.com) and click on the plus sign in the top right corner, then fill in the following information:
 
 ```{r, include=FALSE}
 source('01_R_Files/helperfunctions.R')
@@ -74,9 +68,9 @@ repourl_git <- paste0(repourl, ".git")
 ```
 
 - Repository name: Give a meaningful name, e.g.  ``r reponame``
-- Description: Give a meaningful description, e.g. `Solving exercise 2 of the course "Computational Movement Analysis`
+- Description: Give a meaningful description, e.g. `Solving exercise 2 of the course "Computational Movement Analysis"`
 - Make the repo public, not private
-- Check `Add a README file`
+- Choose `Add a README file`
 
 Click on `Create repository`, then on the green button "Code". Select HTTPS (it might already be selected) and then copy the URL by clicking on the clipboard symbol. The URL should look something list this ``r repourl_git``. 
 

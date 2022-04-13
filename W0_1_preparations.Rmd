@@ -71,7 +71,7 @@ install.packages("terra")
 ## Install Git{#install-git}
 
 
-Git is a software dedicated to version control text files like code scripts. It's heavily used in the software industry as well as in the field of data science. In this course, we will teach use the basic functionalities of Git and combine it with the online portal Github.
+Git is a software dedicated to tracking changes in text files (e.g. R scripts). It's heavily used in the software industry as well as in the field of data science. In this course, we will teach use the basic functionalities of Git and combine it with the online portal Github.
 
 Therefore, the next step is to install Git. There are different Git installers to choose from, we recommend the following:
 
