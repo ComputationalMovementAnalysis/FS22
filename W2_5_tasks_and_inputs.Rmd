@@ -24,7 +24,7 @@ source('01_R_Files/helperfunctions.R')
   - Have a look at your remote Repository on Github (``r repourl``). Do you see the new files there? Contact us if this does not work.
   - **Note**: You do not need to push your changes to your remote repo after every commit. It's enough if you do this every few commits.
 
-### Task 0: Import your data
+### Task 1: Import your data
 
 Create a new R- (or RMarkdown-) file and begin with the following lines of code (adjust the path to your csv file accordingly).
 
@@ -37,7 +37,7 @@ Note:
 - the coordinates are stored in the columns (`E`/`N`)
 - setting `remove =  FALSE` preserves the original (`E`/`N`) columns, which come in handy later on
 
-### Task 1: Getting an overview
+### Task 2: Getting an overview
 
 Calculate the time difference between subsequent rows as described in the demo. You can calculate the time difference using the function `difftime()` in combination with `lead()`. 
 
@@ -62,7 +62,7 @@ After completing the task, commit your changes to git using a good commit messag
 ```
 
 
-### Task 2: Deriving movement parameters I: Speed {#w2-task2}
+### Task 3: Deriving movement parameters I: Speed {#w2-task2}
 
 In this task we will derive some additional movement parameters from our trajectories. So far our trajectories only consist of a list of time-stamped spatial locations. So let's calculate the animal's steplength based on the Euclidean distance between two subsequent locations. 
 
@@ -85,7 +85,7 @@ After completing the task, commit your changes to git using a good commit messag
 
 
 
-### Task 3: Cross-scale movement analysis
+### Task 4: Cross-scale movement analysis
 
 @laube2011 analyse animal movement across different scales (see below). In their paper, the authors suggest reducing the granularity of the data by subsetting the data to every n^th^ element. We will do the same on a dataset that includes 200 locations of a single wild boar with a constant sampling interval of 60 seconds. 
 
@@ -121,7 +121,7 @@ After completing the task, commit your changes to git using a good commit messag
 ```
 
 
-### Task 4: Deriving movement parameters II: Rolling window functions
+### Task 5: Deriving movement parameters II: Rolling window functions
 
 
 A different approach would be to *smoothen* the derived parameters using a [moving window function](https://docs.wavefront.com/images/5sec_moving_window.png). The `zoo` package offers a variate of moving window functions (`roll_*`). Install this package, load it into the session and use the function `roll_mean()` to smooth the calculated speed. Familiarise yourself with this function by working on some dummy data, for example:
