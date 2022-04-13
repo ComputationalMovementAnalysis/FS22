@@ -59,6 +59,7 @@ We recommend updating RStudio to the newest version before the course: check if 
 In the course, we will be needing the following packages (amongst others). Save time during the course by installing these upfront! Check if you can load the packages by calling `library(dplyr)` (note the missing `"`). 
 
 ```{r, opts.label = "noeval", eval = FALSE}
+install.packages("rmarkdown")
 install.packages("dplyr")
 install.packages("ggplot2")
 install.packages("readr")
