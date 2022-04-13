@@ -29,7 +29,7 @@ This will create a clone of that project on your local machine and open it in RS
 Switching between RStudio and Github.com can be inefficient and cumbersome. We have therefore created an RStudio Addin to allow you to write issues directly from within RStudio. To use this addin, you will need to install it first with the following instruction:
   
 1. Install `devtools` (`install.packages("devtools")`)
-2. Install `inlineComments` from Github ([ratnanil/inlineComments](https://github.com/ratnanil/inlineComments), via `devtools::install_github("ratnanil/inlineComments")`)
+2. Install `inlineComments` from Github ([ComputationalMovementAnalysis/inlineComments](https://github.com/ComputationalMovementAnalysis/inlineComments), via `devtools::install_github("ComputationalMovementAnalysis/inlineComments")`)
 4. Restart RStudio
 5. Click on *tools > Modify keyboard shortcuts* and add a shortcut for the command *Insert inline comment* (e.g. `Ctrl + Shift + k`)
 
