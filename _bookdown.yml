@@ -31,6 +31,6 @@ rmd_files:
 delete_merged_file: true
 book_filename: "patterns-and-trends.Rmd"
 output_dir: "docs"
-view: https://github.com/ComputationalMovementAnalysis/FS22/blob/master/%s
-edit: https://github.com/ComputationalMovementAnalysis/FS22/edit/master/%s
+view: https://github.com/ComputationalMovementAnalysis/FS22/blob/main/%s
+edit: https://github.com/ComputationalMovementAnalysis/FS22/edit/main/%s
 new_session: yes
