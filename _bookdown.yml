@@ -5,7 +5,7 @@ rmd_files:
  # - "W1_3_Slides.Rmd"
  - "W1_4_preparation.Rmd"
  - "W1_5_tasks_and_inputs.Rmd"
- # - "W1_6_solutions.Rmd"
+ - "W1_6_solutions.Rmd"
  - "W2_1_exercise.Rmd"
  - "W2_4_demo_tidyverse.Rmd"
  - "W2_4b_demo_tidyverse_code.Rmd"
