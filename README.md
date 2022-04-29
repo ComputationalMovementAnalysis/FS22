@@ -29,6 +29,9 @@ This will publish the content of `docs/` to the branch `gh-pages` of the remote 
 git config alias.publish '!ghp-import -p -n -r gh-pages docs'
 ``` 
 
+Then, you can push the changes to the `gh-pages` remote into the `gh-pages` branch. You might need to pull the remote changes first (`git pull gh-pages gh-pages`).
+
+
 See also [this discussion](https://github.com/orgs/ComputationalMovementAnalysis/teams/core-team/discussions/11)
 
 
