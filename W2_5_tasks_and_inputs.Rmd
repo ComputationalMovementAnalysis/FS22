@@ -140,6 +140,10 @@ After completing the task, commit your changes to git using a good commit messag
 ```{r, code =  mydecrypt("12_Week2/task_4.R",".passphrase"), opts.label="solution_hideOutput"}
 ```
 
+### Submission
+
+
+To submit your exercise, provide us with the URL of your Github repo as described [in the preperation](#create-github-repo).
 
 
 <!-- ### Task 5 (optional): Calculate turning angles -->
