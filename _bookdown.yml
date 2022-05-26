@@ -11,7 +11,7 @@ rmd_files:
  - "W2_4b_demo_tidyverse_code.Rmd"
  - "W2_3_preparation.Rmd"
  - "W2_5_tasks_and_inputs.Rmd"
- # - "W2_6_solutions.Rmd"
+ - "W2_6_solutions.Rmd"
  - "W3_1_exercise.Rmd"
  # - "W3_2_Slides.Rmd"
  - "W3_3_preparation.Rmd"
