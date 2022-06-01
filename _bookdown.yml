@@ -17,7 +17,7 @@ rmd_files:
  - "W3_3_preparation.Rmd"
  - "W3_4_tasks_and_inputs.Rmd"
  - "W3_5_peer_feedback.Rmd"
- # - "W3_5_solutions.Rmd"
+ - "W3_5_solutions.Rmd"
  - "W4_1_exercise.Rmd"
  - "W4_2_Slides.Rmd"
  - "W4_3_preparation.Rmd"
