@@ -22,11 +22,11 @@ rmd_files:
  - "W4_2_Slides.Rmd"
  - "W4_3_preparation.Rmd"
  - "W4_4_tasks_and_inputs.Rmd"
- # - "W4_6_solutions.Rmd"
+ - "W4_6_solutions.Rmd"
  - "W5_1_exercise.Rmd"
  - "W5_2_preparation.Rmd"
  - "W5_3_tasks_and_inputs.Rmd"
- #- "W5_4_solutions.Rmd"
+ - "W5_4_solutions.Rmd"
  - "90_references.Rmd"
 delete_merged_file: true
 book_filename: "patterns-and-trends.Rmd"
